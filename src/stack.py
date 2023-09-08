@@ -36,3 +36,14 @@ class Stack:
         pop = self.top.data
         self.top = self.top.next_node
         return pop
+
+    def __str__(self):
+        """Дандер метод для строкового представления объекта"""
+        node = self.top
+        if node is None:
+            return str(None)
+        full = []
+        while node:
+            full.append(str(node.data))
+            node = node.next_node
+        return "\n".join(full)
