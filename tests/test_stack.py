@@ -35,3 +35,8 @@ class SrcTest(unittest.TestCase):
         top_0.pop()
         self.assertFalse(top_0.top)
 
+    def test_str(self):
+        top_0 = self.Stack
+        top_0.push(self.new_data)
+        self.assertEquals(str(top_0), str(self.new_data))
+
